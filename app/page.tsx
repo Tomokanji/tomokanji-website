@@ -12,82 +12,83 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center h-screen min-h-0 justify-center bg-neutral-50 font-sans dark:bg-neutral-950 overflow-hidden mask-b-from-[calc(100%-96px)] mask-b-to-100%">
-      <main className="flex flex-1 w-full max-w-3xl flex-col p-4 md:p-16 md:pb-0 relative pb-0 space-y-2 items-start">
-        <motion.div
-          initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, type: "spring", bounce: 0 }}
-          className="rounded-3xl shadow-xl shadow-blue-600/25 dark:shadow-blue-800/25 overflow-hidden corner-shape-squircle mb-6 bg-linear-to-b from-slate-900 to-slate-950 ring ring-slate-500/15"
-        >
-          <Image
-            className="dark:hidden"
-            src="/icon-light.jpg"
-            alt="Tomokanji light app icon"
-            width={48}
-            height={48}
-            priority
+    <>
+      <div className="flex flex-col flex-1 items-center h-screen min-h-0 justify-center bg-neutral-50 font-sans dark:bg-neutral-950 overflow-hidden mask-b-from-[calc(100%-96px)] mask-b-to-100%">
+        <main className="flex flex-1 w-full max-w-3xl flex-col p-4 md:p-16 md:pb-0 relative pb-0 space-y-2 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, type: "spring", bounce: 0 }}
+            className="rounded-3xl shadow-xl shadow-blue-600/25 dark:shadow-blue-800/25 overflow-hidden corner-shape-squircle mb-6 bg-linear-to-b from-slate-900 to-slate-950 ring ring-slate-500/15"
+          >
+            <Image
+              className="dark:hidden"
+              src="/icon-light.jpg"
+              alt="Tomokanji light app icon"
+              width={48}
+              height={48}
+              priority
+            />
+            <Image
+              className="dark:block hidden"
+              src="/icon-dark.png"
+              alt="Tomokanji dark app icon"
+              width={48}
+              height={48}
+              priority
+            />
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.1 }}
+            className="font-medium text-sm max-w-lg text-neutral-700 dark:text-neutral-300"
+          >
+            <span className="text-neutral-900 dark:text-neutral-200">Tomokanji</span> – Learn kanji
+            every time you pick up your phone.
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.2 }}
+            className="text-neutral-500 text-sm max-w-lg dark:text-neutral-400"
+          >
+            See kanji you&apos;re studying on your iPhone lock screen and home screen.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.3 }}
+            className="text-neutral-500 text-sm max-w-lg dark:text-neutral-400"
+          >
+            Every time you reach for your phone, you&apos;ll practice your kanji — no app to open,
+            no habit to build.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.4 }}
+            className="w-full h-px bg-neutral-100 dark:bg-neutral-900 mb-6 mt-2"
           />
-          <Image
-            className="dark:block hidden"
-            src="/icon-dark.png"
-            alt="Tomokanji dark app icon"
-            width={48}
-            height={48}
-            priority
-          />
-        </motion.div>
-        <motion.h1
-          initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.1 }}
-          className="font-medium text-sm max-w-lg text-neutral-700 dark:text-neutral-300"
-        >
-          <span className="text-neutral-900 dark:text-neutral-200">Tomokanji</span> – Learn kanji
-          every time you pick up your phone.
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.2 }}
-          className="text-neutral-500 text-sm max-w-lg dark:text-neutral-400"
-        >
-          See kanji you&apos;re studying on your iPhone lock screen and home screen.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.3 }}
-          className="text-neutral-500 text-sm max-w-lg dark:text-neutral-400"
-        >
-          Every time you reach for your phone, you&apos;ll practice your kanji — no app to open, no
-          habit to build.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.4 }}
-          className="w-full h-px bg-neutral-100 dark:bg-neutral-900 mb-6 mt-2"
+          <HeroTabs />
+        </main>
+      </div>
+      <Link
+        href="https://apps.apple.com/app/tomokanji/id000000000"
+        className="fixed hover:scale-102 transition-transform duration-500 bottom-4 left-4 right-4 z-20 md:top-8 md:right-8 md:left-auto md:bottom-auto md:rounded-xl rounded-full overflow-hidden bg-neutral-900 shadow-2xl ring ring-neutral-950 inset-ring inset-ring-white/15 p-1 md:p-2 md:pb-1 flex flex-col items-center gap-0.5"
+      >
+        <div className="h-24 w-24 grow-0 overflow-hidden hidden md:block">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/api/qr" alt="Scan to download Tomokanji" className="w-24 h-24 invert" />
+        </div>
+        <Image
+          width={96}
+          height={80}
+          src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+          alt="Scan to download Tomokanji"
         />
-        <HeroTabs />
-
-        <Link
-          href="https://apps.apple.com/app/tomokanji/id000000000"
-          className="fixed hover:scale-102 transition-transform duration-500 top-8 right-8 rounded-xl bg-neutral-900 shadow-2xl ring ring-neutral-950 inset-ring inset-ring-white/15 p-2 flex flex-col items-center gap-2"
-        >
-          <div className="h-24 w-24 grow-0 overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/api/qr" alt="Scan to download Tomokanji" className="w-24 h-24 invert" />
-          </div>
-          <Image
-            width={96}
-            height={80}
-            src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-            alt="Scan to download Tomokanji"
-          />
-        </Link>
-      </main>
-    </div>
+      </Link>
+    </>
   );
 }
 
@@ -155,7 +156,7 @@ function HeroTabs() {
         />
       }
     >
-      <Tabs.List className="relative z-0 overflow-hidden flex gap-1 p-1 rounded-full inset-ring inset-ring-neutral-400/7 bg-neutral-100 dark:bg-neutral-900 dark:inset-ring-neutral-700/50">
+      <Tabs.List className="relative z-0 overflow-x-auto flex gap-1 p-1 rounded-full inset-ring inset-ring-neutral-400/7 bg-neutral-100 dark:bg-neutral-900 dark:inset-ring-neutral-700/50">
         <Tabs.Tab className={tabClasses} value="lock-screen">
           Lock screen widget
         </Tabs.Tab>
