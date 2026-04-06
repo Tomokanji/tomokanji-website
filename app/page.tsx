@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center h-screen min-h-0 justify-center bg-neutral-50 font-sans dark:bg-neutral-950 overflow-hidden mask-b-from-[calc(100%-96px)] mask-b-to-100%">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center p-16 pr-32 relative pb-0 space-y-2 sm:items-start">
+      <main className="flex flex-1 w-full max-w-3xl flex-col p-4 md:p-16 md:pb-0 relative pb-0 space-y-2 items-start">
         <motion.div
           initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -41,9 +41,10 @@ export default function Home() {
           initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.1 }}
-          className="font-medium text-sm max-w-lg text-neutral-900 dark:text-neutral-200"
+          className="font-medium text-sm max-w-lg text-neutral-700 dark:text-neutral-300"
         >
-          Learn kanji every time you pick up your phone.
+          <span className="text-neutral-900 dark:text-neutral-200">Tomokanji</span> – Learn kanji
+          every time you pick up your phone.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
@@ -51,7 +52,7 @@ export default function Home() {
           transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.2 }}
           className="text-neutral-500 text-sm max-w-lg dark:text-neutral-400"
         >
-          Tomokanji adds the kanji you&apos;re studying to your iPhone lock screen and home screen.
+          See kanji you&apos;re studying on your iPhone lock screen and home screen.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
@@ -59,8 +60,8 @@ export default function Home() {
           transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.3 }}
           className="text-neutral-500 text-sm max-w-lg dark:text-neutral-400"
         >
-          Every time you reach for your phone, you&apos;ll see exactly what you need to practice —
-          no app to open, no habit to build. Just kanji, beautifully displayed, always there.
+          Every time you reach for your phone, you&apos;ll practice your kanji — no app to open, no
+          habit to build.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
@@ -150,7 +151,7 @@ function HeroTabs() {
           initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.5 }}
-          className="w-full flex flex-col relative h-full grow flex-1 overflow-hidden"
+          className="w-full flex flex-col relative h-full grow flex-1 overflow-hidden mb-0!"
         />
       }
     >
