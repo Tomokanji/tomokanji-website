@@ -101,6 +101,7 @@ function HeroTabs() {
   const [currentTime, setCurrentTime] = useState("");
   const [currentTimeInTokyo, setCurrentTimeInTokyo] = useState("");
   const cycleRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const tabListRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const tabs = ["lock-screen", "random-kanji", "quiz", "dictionary"];
@@ -119,6 +120,21 @@ function HeroTabs() {
     }
     setActiveTab(value);
   };
+
+  useEffect(() => {
+    const list = tabListRef.current;
+    if (!list) return;
+    const activeEl = list.querySelector("[data-active]") as HTMLElement | null;
+    if (!activeEl) return;
+    const padding = 8;
+    const listRect = list.getBoundingClientRect();
+    const elRect = activeEl.getBoundingClientRect();
+    if (elRect.right > listRect.right - padding) {
+      list.scrollBy({ left: elRect.right - listRect.right + padding, behavior: "smooth" });
+    } else if (elRect.left < listRect.left + padding) {
+      list.scrollBy({ left: elRect.left - listRect.left - padding, behavior: "smooth" });
+    }
+  }, [activeTab]);
 
   useEffect(() => {
     const update = () => {
@@ -156,7 +172,10 @@ function HeroTabs() {
         />
       }
     >
-      <Tabs.List className="relative z-0 overflow-x-auto flex gap-1 p-1 rounded-full inset-ring inset-ring-neutral-400/7 bg-neutral-100 dark:bg-neutral-900 dark:inset-ring-neutral-700/50">
+      <Tabs.List
+        ref={tabListRef}
+        className="relative z-0 overflow-x-auto flex gap-1 p-1 rounded-full inset-ring inset-ring-neutral-400/7 bg-neutral-100 dark:bg-neutral-900 dark:inset-ring-neutral-700/50"
+      >
         <Tabs.Tab className={tabClasses} value="lock-screen">
           Lock screen widget
         </Tabs.Tab>
