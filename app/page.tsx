@@ -19,7 +19,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.8, type: "spring", bounce: 0 }}
-            className="rounded-3xl shadow-xl shadow-blue-600/25 dark:shadow-blue-800/25 overflow-hidden corner-shape-squircle mb-6 bg-linear-to-b from-slate-900 to-slate-950 ring ring-slate-500/15"
+            className="rounded-xl shadow-xl shadow-blue-600/25 dark:shadow-blue-800/25 overflow-hidden mb-6 bg-linear-to-b from-slate-900 to-slate-950 ring ring-slate-500/15"
           >
             <Image
               className="dark:hidden"
@@ -392,7 +392,7 @@ function RandomKanjiTabContent() {
       {/* Top row: large kanji widget + 2x2 app icons */}
       <div className="grid grid-cols-4 gap-2">
         {/* Large kanji widget */}
-        <div className="bg-white dark:bg-neutral-900 rounded-[42px] col-span-2 row-span-2 p-3 flex flex-col corner-shape-squircle justify-between">
+        <div className="bg-white dark:bg-neutral-900 rounded-3xl col-span-2 row-span-2 p-3 flex flex-col justify-between">
           <div className="flex items-start justify-between">
             <div className="flex items-start gap-1">
               <span className="text-2xl font-medium text-neutral-900 dark:text-neutral-100 leading-none">
@@ -423,7 +423,7 @@ function RandomKanjiTabContent() {
         <div className="aspect-square col-span-1 row-span-1 rounded-[18px] bg-neutral-100 dark:bg-neutral-900" />
         <div className="aspect-square col-span-1 row-span-1 rounded-[18px] bg-neutral-100 dark:bg-neutral-900" />
         {/* Bottom row: wide vocabulary widget */}
-        <div className="bg-neutral-100 dark:bg-neutral-800 rounded-[42px] col-span-4 row-span-2 p-1 flex gap-0 corner-shape-squircle backdrop-blur-sm">
+        <div className="bg-neutral-100 dark:bg-neutral-800 rounded-3xl col-span-4 row-span-2 p-1 flex gap-0 backdrop-blur-sm">
           {/* Left: kanji info */}
           <div className="flex flex-col justify-between w-28 shrink-0 p-2">
             <div className="flex items-start justify-between">
@@ -451,7 +451,7 @@ function RandomKanjiTabContent() {
           </div>
 
           {/* Right: vocabulary compound list */}
-          <div className="flex flex-col flex-1 bg-white dark:bg-neutral-900 min-w-0 corner-shape-squircle rounded-[36px] shadow-sm ring-0.5 ring-neutral-300/10">
+          <div className="flex flex-col flex-1 bg-white dark:bg-neutral-900 min-w-0 rounded-[20px] shadow-sm ring-0.5 ring-neutral-300/10">
             <div className="p-2 py-1.5 flex items-center justify-between">
               <div>
                 <p className="text-[8px] text-neutral-300 dark:text-neutral-600 -mb-1">
@@ -504,7 +504,7 @@ function QuizTabContent() {
       {/* Top row: large kanji widget + 2x2 app icons */}
       <div className="grid grid-cols-4 gap-2">
         {/* Bottom row: wide vocabulary widget */}
-        <div className="bg-neutral-100 dark:bg-neutral-800 rounded-[42px] col-span-4 row-span-2 p-1 flex gap-0 corner-shape-squircle backdrop-blur-sm">
+        <div className="bg-neutral-100 dark:bg-neutral-800 rounded-3xl col-span-4 row-span-2 p-1 flex gap-0 backdrop-blur-sm">
           {/* Left: kanji info */}
           <div className="flex flex-col justify-between w-24 shrink-0 p-2">
             <div className="flex items-start justify-between">
@@ -539,24 +539,24 @@ function QuizTabContent() {
 
           {/* Right: vocabulary compound list */}
           <div className="grid text-[11px] font-medium grid-cols-2 gap-1 flex-1 min-w-0">
-            <div className="p-2 flex flex-col aspect-7/5 items-center justify-around corner-shape-squircle rounded-[40px] bg-white dark:bg-neutral-900 shadow-sm ring-0.5 ring-neutral-300/10 dark:ring-neutral-600/20">
+            <div className="p-2 flex flex-col aspect-7/5 items-center justify-around rounded-[20px] bg-white dark:bg-neutral-900 shadow-sm ring-0.5 ring-neutral-300/10 dark:ring-neutral-600/20">
               <p className=" text-neutral-800 dark:text-neutral-100">ネン</p>
               <div className="h-px w-full bg-neutral-100 dark:bg-neutral-600/50 shrink-0" />
               <p className=" text-neutral-800 dark:text-neutral-100">とし</p>
             </div>
 
-            <div className="p-2 flex flex-col aspect-7/5 items-center justify-around corner-shape-squircle rounded-[40px] bg-white dark:bg-neutral-900 shadow-sm ring-0.5 ring-neutral-300/10 dark:ring-neutral-600/20">
+            <div className="p-2 flex flex-col aspect-7/5 items-center justify-around rounded-[20px] bg-white dark:bg-neutral-900 shadow-sm ring-0.5 ring-neutral-300/10 dark:ring-neutral-600/20">
               <p className=" text-neutral-800 dark:text-neutral-100">シン</p>
               <div className="h-px w-full bg-neutral-100 dark:bg-neutral-600/50 shrink-0" />
               <p className=" text-neutral-300 dark:text-neutral-600">〜</p>
             </div>
-            <div className="p-2 relative flex flex-col aspect-7/5 items-center justify-around corner-shape-squircle rounded-[40px] bg-white dark:bg-neutral-900 shadow-sm ring-0.5 ring-neutral-300/10 dark:ring-neutral-600/20">
+            <div className="p-2 relative flex flex-col aspect-7/5 items-center justify-around rounded-[20px] bg-white dark:bg-neutral-900 shadow-sm ring-0.5 ring-neutral-300/10 dark:ring-neutral-600/20">
               <p className=" text-neutral-800 dark:text-neutral-100">シュウ, ソウ</p>
               <div className="h-px w-full bg-neutral-100 dark:bg-neutral-600/50 shrink-0" />
               <p className=" text-neutral-800 dark:text-neutral-100">むね</p>
               <XCircleIcon className="size-3 text-red-600 inset-ring-2 inset-ring-red-600 rounded-full absolute right-1.5 top-1.5" />
             </div>
-            <div className="p-2 flex flex-col aspect-7/5 items-center justify-center corner-shape-squircle rounded-[40px] bg-white dark:bg-neutral-900 shadow-sm ring-0.5 ring-neutral-300/10 dark:ring-neutral-600/20">
+            <div className="p-2 flex flex-col aspect-7/5 items-center justify-center rounded-[20px] bg-white dark:bg-neutral-900 shadow-sm ring-0.5 ring-neutral-300/10 dark:ring-neutral-600/20">
               <QuestionMarkCircleIcon className="size-3.5 text-neutral-300 dark:text-neutral-500" />
 
               <p className=" text-neutral-300 dark:text-neutral-500 font-normal">Don't know</p>
