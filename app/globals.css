@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-rounded: "SF Pro Rounded", ui-rounded, system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +24,38 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* corner-shape utilities — use with border-radius (e.g. rounded-xl corner-shape-squircle) */
+@utility corner-shape-squircle {
+  corner-shape: squircle;
+}
+
+@utility corner-shape-round {
+  corner-shape: round;
+}
+
+@utility corner-shape-angle {
+  corner-shape: angle;
+}
+
+@utility corner-shape-scoop {
+  corner-shape: scoop;
+}
+
+/* per-corner variants */
+@utility corner-tl-squircle {
+  corner-top-left-shape: squircle;
+}
+
+@utility corner-tr-squircle {
+  corner-top-right-shape: squircle;
+}
+
+@utility corner-bl-squircle {
+  corner-bottom-left-shape: squircle;
+}
+
+@utility corner-br-squircle {
+  corner-bottom-right-shape: squircle;
 }
