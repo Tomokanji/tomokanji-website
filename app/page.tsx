@@ -64,12 +64,6 @@ export default function Home() {
             Every time you reach for your phone, you&apos;ll practice your kanji — no app to open,
             no habit to build.
           </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: -8, filter: "blur(4px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.8, type: "spring", bounce: 0, delay: 0.4 }}
-            className="w-full h-px bg-neutral-100 dark:bg-neutral-900 mb-6 mt-2"
-          />
           <HeroTabs />
         </main>
       </div>
@@ -86,6 +80,7 @@ export default function Home() {
           height={80}
           src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
           alt="Scan to download Tomokanji"
+          className="scale-120 h-10 md:scale-100 md:h-auto"
         />
       </Link>
     </>
@@ -93,7 +88,7 @@ export default function Home() {
 }
 
 const tabClasses =
-  "flex h-8 flex-1 items-center justify-center border-0 px-2 text-xs font-medium break-keep whitespace-nowrap text-gray-500 dark:text-neutral-500 outline-hidden select-none before:inset-x-0 before:inset-y-1 before:rounded-full before:-outline-offset-1 before:outline-blue-800 hover:text-gray-900 dark:hover:text-neutral-200 focus-visible:relative focus-visible:before:absolute focus-visible:before:outline focus-visible:before:outline-2 data-[active]:text-gray-900 dark:data-[active]:text-neutral-100";
+  "flex h-8 flex-1 shrink-0 items-center justify-center border-0 px-2 text-xs font-medium break-keep whitespace-nowrap text-gray-500 dark:text-neutral-500 outline-hidden select-none before:inset-0 before:rounded-full before:-outline-offset-1 before:outline-blue-800 hover:text-gray-900 dark:hover:text-neutral-200 focus-visible:relative focus-visible:before:absolute focus-visible:before:outline focus-visible:before:outline-2 data-[active]:text-gray-900 dark:data-[active]:text-neutral-100";
 
 function HeroTabs() {
   const [activeTab, setActiveTab] = useState("lock-screen");
@@ -174,7 +169,7 @@ function HeroTabs() {
     >
       <Tabs.List
         ref={tabListRef}
-        className="relative z-0 overflow-x-auto flex gap-1 p-1 rounded-full inset-ring inset-ring-neutral-400/7 bg-neutral-100 dark:bg-neutral-900 dark:inset-ring-neutral-700/50"
+        className="relative z-0 overflow-x-auto shrink-0 flex gap-1 p-1 rounded-full inset-ring inset-ring-neutral-400/7 bg-neutral-100 dark:bg-neutral-900 dark:inset-ring-neutral-700/50"
       >
         <Tabs.Tab className={tabClasses} value="lock-screen">
           Lock screen widget
@@ -209,25 +204,25 @@ function HeroTabs() {
         alt="Minimal japanese iphone background"
         width={391}
         height={800}
-        className="absolute dark:hidden z-1 w-[360] h-192 top-18 left-1/2 -translate-x-1/2 rounded-[56px]"
+        className="absolute dark:hidden z-1 w-[360] max-w-[90%] h-192 top-18 left-1/2 -translate-x-1/2 rounded-[56px]"
       />
       <Image
         src="/mount-fuji-dark.webp"
         alt="Photo of mount fuji at night"
         width={391}
         height={800}
-        className="absolute hidden dark:block z-1 w-[360] h-192 top-18 left-1/2 -translate-x-1/2 rounded-[56px]"
+        className="absolute hidden dark:block z-1 w-[360] max-w-[90%] h-192 top-18 left-1/2 -translate-x-1/2 rounded-[56px]"
       />
       <div
         className={
-          "absolute z-1 w-[360] bg-slate-800/20 dark:bg-slate-800/60 h-192 top-18 left-1/2 -translate-x-1/2 rounded-[56px]"
+          "absolute z-1 w-[360] max-w-[90%] bg-slate-800/20 dark:bg-slate-800/60 h-192 top-18 left-1/2 -translate-x-1/2 rounded-[56px]"
         }
       />
       <AnimatePresence mode="popLayout">
         {activeTab === "lock-screen" && (
           <Tabs.Panel
             key="lock-screen"
-            className="flex pt-9 z-2 h-full items-start justify-center"
+            className="flex pt-9 z-2 max-w-full px-4 h-full items-start justify-center"
             value="lock-screen"
             keepMounted
             render={
@@ -249,7 +244,7 @@ function HeroTabs() {
         {activeTab === "random-kanji" && (
           <Tabs.Panel
             key="random-kanji"
-            className="flex pt-9 z-2 h-full items-start justify-center"
+            className="flex pt-9 z-2 max-w-full px-4 h-full items-start justify-center"
             value="random-kanji"
             keepMounted
             render={
@@ -267,7 +262,7 @@ function HeroTabs() {
         {activeTab === "quiz" && (
           <Tabs.Panel
             key="quiz"
-            className="flex pt-9 z-2 h-full items-start justify-center"
+            className="flex pt-9 z-2 max-w-full px-4 h-full items-start justify-center"
             value="quiz"
             keepMounted
             render={
@@ -285,7 +280,7 @@ function HeroTabs() {
         {activeTab === "dictionary" && (
           <Tabs.Panel
             key="dictionary"
-            className="absolute top-19 inset-x-0 flex items-start justify-center z-2 origin-bottom"
+            className="absolute top-19 max-w-full px-4 inset-x-0 flex items-start justify-center z-2 origin-bottom"
             value="dictionary"
             keepMounted
             render={
