@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.tomokanji.app"),
   title: "Tomokanji — Learn Kanji on Your Lock Screen",
   description:
     "Add kanji to your iPhone lock screen and home screen. Study passively every time you unlock your phone. Beautiful widgets for Japanese learners.",
