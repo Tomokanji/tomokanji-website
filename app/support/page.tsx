@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Support — Tomokanji",
@@ -9,6 +11,27 @@ export default function Support() {
   return (
     <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 font-sans">
       <main className="mx-auto max-w-2xl px-6 py-16 md:py-24">
+        <Link
+          href="/"
+          className="inline-block mb-8 rounded-xl shadow-xl shadow-blue-600/25 dark:shadow-blue-800/25 overflow-hidden bg-linear-to-b from-slate-900 to-slate-950 ring ring-slate-500/15"
+        >
+          <Image
+            className="dark:hidden"
+            src="/icon-light.jpg"
+            alt="Tomokanji"
+            width={48}
+            height={48}
+            priority
+          />
+          <Image
+            className="dark:block hidden"
+            src="/icon-dark.png"
+            alt="Tomokanji"
+            width={48}
+            height={48}
+            priority
+          />
+        </Link>
         <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
           Support
         </h1>

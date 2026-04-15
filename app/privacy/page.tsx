@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Tomokanji",
@@ -10,6 +12,27 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 font-sans">
       <main className="mx-auto max-w-2xl px-6 py-16 md:py-24">
+        <Link
+          href="/"
+          className="inline-block mb-8 rounded-xl shadow-xl shadow-blue-600/25 dark:shadow-blue-800/25 overflow-hidden bg-linear-to-b from-slate-900 to-slate-950 ring ring-slate-500/15"
+        >
+          <Image
+            className="dark:hidden"
+            src="/icon-light.jpg"
+            alt="Tomokanji"
+            width={48}
+            height={48}
+            priority
+          />
+          <Image
+            className="dark:block hidden"
+            src="/icon-dark.png"
+            alt="Tomokanji"
+            width={48}
+            height={48}
+            priority
+          />
+        </Link>
         <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
           Privacy Policy
         </h1>
@@ -122,7 +145,11 @@ export default function PrivacyPolicy() {
           </h2>
           <p className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 leading-relaxed">
             If you have any questions or concerns about this Privacy Policy or our data practices,
-            please contact us at:
+            please visit our{" "}
+            <Link href="/support" className="text-blue-600 dark:text-blue-400 hover:underline">
+              support page
+            </Link>{" "}
+            or contact us at:
           </p>
           <p className="text-sm text-neutral-700 dark:text-neutral-300">
             <strong className="text-neutral-900 dark:text-neutral-100">Email:</strong>{" "}
