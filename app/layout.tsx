@@ -16,6 +16,20 @@ export const metadata: Metadata = {
   title: "Tomokanji — Learn Kanji on Your Lock Screen",
   description:
     "Add kanji to your iPhone lock screen and home screen. Study passively every time you unlock your phone. Beautiful widgets for Japanese learners.",
+  openGraph: {
+    title: "Tomokanji — Learn Kanji on Your Lock Screen",
+    description:
+      "Add kanji to your iPhone lock screen and home screen. Study passively every time you unlock your phone. Beautiful widgets for Japanese learners.",
+    type: "website",
+    images: [{ url: "/og-image.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tomokanji — Learn Kanji on Your Lock Screen",
+    description:
+      "Add kanji to your iPhone lock screen and home screen. Study passively every time you unlock your phone. Beautiful widgets for Japanese learners.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
