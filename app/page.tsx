@@ -68,7 +68,7 @@ export default function Home() {
         </main>
       </div>
       <Link
-        href="https://apps.apple.com/app/tomokanji/id000000000"
+        href="https://apps.apple.com/ca/app/tomokanji/id6686408263"
         className="fixed hover:scale-102 transition-transform duration-500 bottom-4 left-4 right-4 z-20 md:top-8 md:right-8 md:left-auto md:bottom-auto md:rounded-xl rounded-full overflow-hidden bg-neutral-900 shadow-2xl ring ring-neutral-950 inset-ring inset-ring-white/15 p-1 md:p-2 md:pb-1 flex flex-col items-center gap-0.5"
       >
         <div className="h-24 w-24 grow-0 overflow-hidden hidden md:block">
